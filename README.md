@@ -73,6 +73,17 @@ Use a custom port:
 PORT=8080 ./gen.sh "data.txt" "+919864096534"
 ```
 
+If your OpenAI project cannot access the default generation model, override it explicitly:
+
+```bash
+OPENAI_MODEL=gpt-5 PORT=8080 ./gen.sh "data.txt" "+919864096534"
+```
+
+Optional model environment variables:
+
+- `OPENAI_MODEL`: preferred generation model. If unavailable, the script falls back through compatible defaults.
+- `OPENAI_WEB_MODEL`: model used for the optional web-search enrichment step.
+
 ## Deployment
 
 Since the output is static, you can deploy to:
